@@ -45,7 +45,7 @@ SnakeGame.UI = (function () {
     var tile = $(row).eq(colIndex);
     $(tile).addClass("apple");
 
-    // add snakes
+    // add snake
     var segments = this.board.snake.segments;
     _.each(segments, function (segment) {
       var rowIndex = segment[0];
@@ -83,22 +83,20 @@ SnakeGame.UI = (function () {
 
       board.step();
 
-			if (board.snake.hitApple(board.apple)) {
-				that.clearTile(board.apple);
-				board.eatApple(board.apple);
-				board.newApple();
-			} else {
-	      tailToSlice = that.board.sliceTail();
-	      that.clearTile(tailToSlice);
-			}
-
-      that.renderBoard();
-
       if (board.snake.isDead(board.numRows, board.numCols)) {
-        console.log("game over!");
         that.gameOver(intervalId);
-      }
+      } else {
+        if (board.snake.hitApple(board.apple)) {
+          that.clearTile(board.apple);
+          board.eatApple(board.apple);
+          board.newApple();
+        } else {
+          tailToSlice = that.board.sliceTail();
+          that.clearTile(tailToSlice);
+        }
 
+        that.renderBoard();
+      }
     }, 125);
 
     // listen for keys

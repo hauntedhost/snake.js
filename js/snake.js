@@ -58,12 +58,24 @@ SnakeGame.Snake = (function () {
 		return hitApple;
 	}
 
+	Snake.prototype.hitSelf = function () {
+		var that = this;
+		var head = that.segments[0];
+		var headRow = head[0], headCol = head[1];
+
+		var hitSelf = _(this.segments.slice(1)).some(function (segment) {
+			var segRow = segment[0], segCol = segment[1];
+			return (segRow ===  headRow && segCol === headCol);
+		});
+		return hitSelf;
+	}
+
 	Snake.prototype.isDead = function (numRows, numCols) {
 		var that = this;
 		var head = that.segments[0];
 		var row = head[0], col = head[1];
 
-		var isDead = (row < 0 || row > numRows - 1 || col < 0 || col > numCols - 1);
+		var isDead = (row < 0 || row > numRows - 1 || col < 0 || col > numCols - 1 || this.hitSelf() == true);
 		return isDead;
 	}
 
