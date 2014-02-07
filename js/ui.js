@@ -9,20 +9,20 @@ SnakeGame.UI = (function () {
   }
 
   UI.prototype.createViewBoard = function () {
-		var that = this;
-		$(that.container).html("");
+    var that = this;
+    $(that.container).html("");
 
-		_(15).times(function (r) {
-			var $row = $('<section></section>');
-			that.container.append($row);
-			_(20).times(function (c) {
-				$row.append($('<div>'));
-			});
-		});
+    _(15).times(function (r) {
+      var $row = $('<section></section>');
+      that.container.append($row);
+      _(20).times(function (c) {
+        $row.append($('<div>'));
+      });
+    });
   }
 
   UI.prototype.loadViewBoard = function () {
-		var that = this;
+    var that = this;
     var viewBoard = [];
     var rows = $(that.container).children("section");
     rows.each(function (rowIndex, row) {
@@ -30,15 +30,15 @@ SnakeGame.UI = (function () {
     });
     that.viewBoard = viewBoard;
 
-		console.log("loaded board:");
-		console.log(that.viewBoard);
+    console.log("loaded board:");
+    console.log(that.viewBoard);
   }
 
   UI.prototype.renderBoard = function () {
     var viewBoard = this.viewBoard;
 
-		// add apple
-		var apple = this.board.apple;
+    // add apple
+    var apple = this.board.apple;
     var rowIndex = apple[0];
     var colIndex = apple[1];
     var row = viewBoard[rowIndex];
@@ -75,7 +75,7 @@ SnakeGame.UI = (function () {
   UI.prototype.play = function () {
     var that = this;
 
-		this.createViewBoard();
+    this.createViewBoard();
     this.loadViewBoard();
 
     var intervalId = window.setInterval(function () {

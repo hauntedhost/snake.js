@@ -33,7 +33,7 @@ section div {
 }
 
 .apple {
-	background-color: #008500;
+  background-color: #008500;
   -moz-box-shadow:    inset 0 0 2px #003300;
   -webkit-box-shadow: inset 0 0 2px #003300;
   box-shadow:         inset 0 0 2px #003300;

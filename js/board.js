@@ -17,22 +17,22 @@ SnakeGame.Board = (function () {
     });
   }
 
-	Board.prototype.newApple = function () {
-		var that = this;
-		var row = parseInt(Math.random() * (that.numRows));
-		var col = parseInt(Math.random() * (that.numCols));
-		that.apple = [row, col];
-	}
+  Board.prototype.newApple = function () {
+    var that = this;
+    var row = parseInt(Math.random() * (that.numRows));
+    var col = parseInt(Math.random() * (that.numCols));
+    that.apple = [row, col];
+  }
 
-	Board.prototype.eatApple = function () {
-		that = this;
-		that.apple = [];
-	}
+  Board.prototype.eatApple = function () {
+    that = this;
+    that.apple = [];
+  }
 
-	Board.prototype.sliceTail = function () {
+  Board.prototype.sliceTail = function () {
     var tailSlice = this.snake.segments.pop();
     return tailSlice;
-	}
+  }
 
   Board.prototype.step = function () {
     var segments = this.snake.segments;
