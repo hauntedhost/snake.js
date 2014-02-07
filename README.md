@@ -1,12 +1,22 @@
-**DEMO:** http://seanomlor.com/demo/snake
+Snake
+=========
 
+Demo
+----
+Live demo hosted here:
+[**LIVE DEMO**](http://seanomlor.com/demo/snake)
+
+[![Screenshot](/images/screenshot.png)](http://seanomlor.com/demo/snake)
+
+Summary
+-------
+Snake is a work-in-progress JavaScript clone of the famous [Snake](http://en.wikipedia.org/wiki/Snake_(video_game)) video game.
+
+Usage
+-----
 ```
-                           dP                
-                           88                
-.d8888b. 88d888b. .d8888b. 88  .dP  .d8888b. 
-Y8ooooo. 88'  `88 88'  `88 88888"   88ooood8 
-      88 88    88 88.  .88 88  `8b. 88.  ... 
-`88888P' dP    dP `88888P8 dP   `YP `88888P' 
+open demo.html
 ```
 
-http://en.wikipedia.org/wiki/Snake_(video_game)
+---
+Developed by [Sean Omlor](http://seanomlor.com)
