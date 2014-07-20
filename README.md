@@ -6,7 +6,7 @@ Demo
 Live demo hosted here:
 [**LIVE DEMO**](http://seanomlor.com/demo/snake)
 
-[![Screenshot](/images/screenshot.png)](http://seanomlor.com/demo/snake)
+[![Screenshot](https://raw.githubusercontent.com/somlor/snake.js/master/images/screenshot.png)](http://seanomlor.com/demo/snake)
 
 Summary
 -------
